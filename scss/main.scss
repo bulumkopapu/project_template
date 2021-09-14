@@ -14,6 +14,9 @@ body {
     box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.497159);
     border-radius: 23px;
     margin: 148px 0 85px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     h1 {
         padding-top: 132px;
@@ -22,5 +25,45 @@ body {
 
     &-text {
         margin-top: 40px;
+        padding-left: 24px;
+        padding-right: 24px;
+        width: 100%;
+        max-width: 430px;
+
+        & .text-item {
+            border-bottom: 1px solid #E8E8EA;
+            padding-bottom: 18px;
+
+            & .visibleText {
+                display: flex;
+                justify-content: space-between;
+
+                & .arrow {
+                    border-left: 0.2rem solid $accent;
+                    border-bottom: 0.2rem solid $accent;
+                    width: 0.55rem;
+                    height: 0.55rem;
+                    transform: rotate(-45deg);
+                    transition: transform 0.8s;
+                    cursor: pointer;
+    
+                    &:hover {
+                        transform: rotate(315deg);
+                    }
+                }
+            }
+
+            & .jsText {
+                padding-top: 12px;
+                // display: none;
+
+                & p {
+                    font-size: 12px;
+                    line-height: 18px;
+                    color: #787887;
+                }
+            }
+
+        }
     }
 }
