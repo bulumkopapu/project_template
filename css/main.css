@@ -12,7 +12,7 @@ p, a {
   font-family: 'Kumbh Sans', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 14px;
   color: #4B4C5F;
 }
@@ -75,13 +75,43 @@ body {
   padding-bottom: 24px;
 }
 
+@media (min-width: 969px) {
+  .main-card {
+    margin-top: 129px;
+    min-height: 509px;
+    display: block;
+  }
+}
+
 .main-card .image {
   position: absolute;
   top: -108px;
 }
 
+@media (min-width: 969px) {
+  .main-card .image {
+    top: 0;
+  }
+}
+
 .main-card .image img {
   width: 100%;
+}
+
+@media (min-width: 969px) {
+  .main-card .image #mobile-image {
+    display: none;
+  }
+}
+
+.main-card .image .desktop-version {
+  display: none;
+}
+
+@media (min-width: 969px) {
+  .main-card .image .desktop-version {
+    display: block;
+  }
 }
 
 .main-card-text {
@@ -91,10 +121,26 @@ body {
   max-width: 350px;
 }
 
+@media (min-width: 969px) {
+  .main-card-text {
+    position: absolute;
+    top: 0;
+    right: 71px;
+  }
+}
+
 .main-card-text h1 {
   padding-top: 132px;
   padding-bottom: 40px;
   text-align: center;
+}
+
+@media (min-width: 969px) {
+  .main-card-text h1 {
+    text-align: left;
+    padding-top: 65px;
+    padding-bottom: 45px;
+  }
 }
 
 .main-card-text .text-item {
@@ -110,6 +156,12 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (min-width: 969px) {
+  .main-card-text .text-item .visibleText p {
+    font-size: 14px;
+  }
 }
 
 .main-card-text .text-item .visibleText .arrow {

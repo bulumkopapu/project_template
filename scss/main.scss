@@ -21,13 +21,35 @@ body {
     align-items: center;
     padding-bottom: 24px;
 
+    @include desktop-screen {
+        margin-top: 129px;
+        min-height: 509px;
+        display: block;
+    }
+
     .image {
         position: absolute;
         top: -108px;
+        @include desktop-screen {
+            top: 0;
+        }
 
         img {
             width: 100%;
         }
+
+        #mobile-image {
+            @include desktop-screen {
+                display: none;
+            }
+        }
+        .desktop-version {
+            display: none;
+            @include desktop-screen {
+                display: block;
+            }
+        }
+
     }
 
     &-text {
@@ -37,10 +59,22 @@ body {
         width: 100%;
         max-width: 350px;
 
+        @include desktop-screen {
+            position: absolute;
+            top: 0;
+            right: 71px;
+        }
+
         h1 {
             padding-top: 132px;
             padding-bottom: 40px;
             text-align: center;
+
+            @include desktop-screen{
+                text-align: left;
+                padding-top: 65px;
+                padding-bottom: 45px;
+            }
         }
 
         & .text-item {
@@ -51,6 +85,12 @@ body {
             & .visibleText {
                 display: flex;
                 justify-content: space-between;
+
+                & p {
+                    @include desktop-screen{
+                        font-size: 14px;
+                    }
+                }
 
                 & .arrow {
                     border-left: 0.2rem solid $accent;
