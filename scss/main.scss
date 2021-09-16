@@ -27,29 +27,47 @@ body {
         display: block;
     }
 
-    .image {
+    .image-mobile-version {
         position: absolute;
         top: -108px;
         @include desktop-screen {
-            top: 0;
+            display: none;
         }
-
         img {
             width: 100%;
         }
+    }
 
-        #mobile-image {
-            @include desktop-screen {
-                display: none;
-            }
-        }
-        .desktop-version {
-            display: none;
-            @include desktop-screen {
-                display: block;
-            }
+    .image-desktop-version {
+        display: none;
+        @include desktop-screen {
+            display: block;
         }
 
+        #base {
+            position: absolute;
+            top: 82px;
+        }
+
+        #main {
+            position: absolute;
+            top: 71px;
+        }
+
+        #box {
+            position: absolute;
+            top: 206px;
+            left: -90px;
+        }
+        #top-a {
+            position: absolute;
+            z-index: -10;
+        }
+
+        #top-b {
+            position: absolute;
+            z-index: -10;
+        }
     }
 
     &-text {
@@ -60,9 +78,10 @@ body {
         max-width: 350px;
 
         @include desktop-screen {
-            position: absolute;
-            top: 0;
-            right: 71px;
+            position: relative;
+            right: -485px;
+            padding-left: 0px;
+            padding-right: 0px;
         }
 
         h1 {
@@ -87,6 +106,10 @@ body {
                 justify-content: space-between;
 
                 & p {
+                    &:hover{
+                        color: $accent;
+                        cursor: pointer;
+                    }
                     @include desktop-screen{
                         font-size: 14px;
                     }
