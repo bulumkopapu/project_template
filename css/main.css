@@ -197,16 +197,11 @@ body {
   height: 0.55rem;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  -webkit-transition: -webkit-transform 0.8s;
-  transition: -webkit-transform 0.8s;
-  transition: transform 0.8s;
-  transition: transform 0.8s, -webkit-transform 0.8s;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
   cursor: pointer;
-}
-
-.main-card-text .text-item .visibleText .arrow:hover {
-  -webkit-transform: rotate(315deg);
-          transform: rotate(315deg);
 }
 
 .main-card-text .text-item .jsText {

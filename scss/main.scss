@@ -121,12 +121,12 @@ body {
                     width: 0.55rem;
                     height: 0.55rem;
                     transform: rotate(-45deg);
-                    transition: transform 0.8s;
+                    transition: transform 0.5s;
                     cursor: pointer;
     
-                    &:hover {
-                        transform: rotate(315deg);
-                    }
+                    // &:hover {
+                    //     transform: rotate(135deg);
+                    // }
                 }
             }
 
@@ -144,3 +144,6 @@ body {
         }
     }
 }
+
+
+
