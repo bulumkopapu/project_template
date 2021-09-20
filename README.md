@@ -13,4 +13,4 @@
 
 ---
 ## Launch
-View the live project [here](https://affectionate-swartz-538610.netlify.app/).
+View the live project [here](https://affectionate-swartz-538610.netlify.app/){:target="\_blank"}.
