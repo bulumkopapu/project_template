@@ -18,64 +18,20 @@ const text5 = document.getElementById('visible-text-5');
 const jsText5 = document.getElementById('js-text-5');
 const arrow5 = document.getElementById('arrow-5');
 
-
-text1.addEventListener('click', () =>{ 
-    if (jsText1.style.display === 'none'){
-        text1.querySelector("p").style.fontWeight = "900";
-        jsText1.style.display = "block";
-        arrow1.style.transform = "rotate(135deg)";
+const switchOn = (text, jsText, arrow) => {
+    if (jsText.style.display === 'none'){
+        text.querySelector("p").style.fontWeight = "900";
+        jsText.style.display = "block";
+        arrow.style.transform = "rotate(135deg)";
     } else {
-        text1.querySelector("p").style.fontWeight = "400";
-        jsText1.style.display = "none";
-        arrow1.style.transform = "rotate(-45deg)";
+        text.querySelector("p").style.fontWeight = "400";
+        jsText.style.display = "none";
+        arrow.style.transform = "rotate(-45deg)";
     }
-})
+}
 
-text2.addEventListener('click', () =>{ 
-    if (jsText2.style.display === 'none'){
-        text2.querySelector("p").style.fontWeight = "900";
-        jsText2.style.display = "block";
-        arrow2.style.transform = "rotate(135deg)";
-    } else {
-        text2.querySelector("p").style.fontWeight = "400";
-        jsText2.style.display = "none";
-        arrow2.style.transform = "rotate(-45deg)";
-    }
-})
-
-text3.addEventListener('click', () =>{ 
-    if (jsText3.style.display === 'none'){
-        text3.querySelector("p").style.fontWeight = "900";
-        jsText3.style.display = "block";
-        arrow3.style.transform = "rotate(135deg)";
-    } else {
-        text3.querySelector("p").style.fontWeight = "400";
-        jsText3.style.display = "none";
-        arrow3.style.transform = "rotate(-45deg)";
-    }
-})
-
-text4.addEventListener('click', () =>{ 
-    if (jsText4.style.display === 'none'){
-        text4.querySelector("p").style.fontWeight = "900";
-        jsText4.style.display = "block";
-        arrow4.style.transform = "rotate(135deg)";
-    } else {
-        text4.querySelector("p").style.fontWeight = "400";
-        jsText4.style.display = "none";
-        arrow4.style.transform = "rotate(-45deg)";
-    }
-})
-
-text5.addEventListener('click', () =>{ 
-    if (jsText5.style.display === 'none'){
-        text5.querySelector("p").style.fontWeight = "900";
-        jsText5.style.display = "block";
-        arrow5.style.transform = "rotate(135deg)";
-    } else {
-        text5.querySelector("p").style.fontWeight = "400";
-        jsText5.style.display = "none";
-        arrow5.style.transform = "rotate(-45deg)";
-    }
-})
-
+text1.addEventListener('click', ()=>{switchOn(text1, jsText1, arrow1)});
+text2.addEventListener('click', ()=>{switchOn(text2, jsText2, arrow2)});
+text3.addEventListener('click', ()=>{switchOn(text3, jsText3, arrow3)});
+text4.addEventListener('click', ()=>{switchOn(text4, jsText4, arrow4)});
+text5.addEventListener('click', ()=>{switchOn(text5, jsText5, arrow5)});
