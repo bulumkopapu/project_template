@@ -19,7 +19,7 @@ const jsText5 = document.getElementById('js-text-5');
 const arrow5 = document.getElementById('arrow-5');
 
 const switchOn = (text, jsText, arrow) => {
-    if (jsText.style.display === 'none'){
+    if (jsText.style.display == 'none' || jsText.style.display == ''){
         text.querySelector("p").style.fontWeight = "900";
         jsText.style.display = "block";
         arrow.style.transform = "rotate(135deg)";
